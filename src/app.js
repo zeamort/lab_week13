@@ -1,5 +1,7 @@
 'use strict';
 
+/* Clone */
+
 /*Select all divs contained within the original-container class and assign to variable eventDiv*/
 const eventDiv = document.querySelectorAll('.original-container div')
 const copyArea = document.querySelector('.copy-container')
@@ -10,3 +12,9 @@ eventDiv.forEach(element => element.addEventListener('click', (evt) => {
     copyArea.insertAdjacentHTML("beforeend", cloneMaterial);
 }))
 
+/* Delete */
+const resetButton = document.querySelector('button')
+
+resetButton.addEventListener('click', (evt) => {
+    copyArea.innerHTML = '';
+})
